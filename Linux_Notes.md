@@ -1,4 +1,10 @@
 # Linux Notes
+
+## Commands
+- > ls -a `shows hidden directories`
+- > bash `use to refresh terminal`
+
+
 ### Day 1
 [1.1]AWS Account Creation : Create an AWS account and use console to make ec2 instance and there run this below commands in terminal.
 
@@ -48,7 +54,7 @@ To install :
          > sudo -i `user called root user. full form of sudo : super user do`
 - [2.22] Home Directory(/home) :
     - it shows normal user ex. Ubuntu, Amol, Hp, etc.
-    > sudo su `su for switch user. You can change user which in inside root directory.`
+    > sudo su `su for switch user. You can change user which in inside root directory. It took you to home directory of that local user`
 - [2.23] /etc 
     - It stores all configurations files of system and services.
 
@@ -56,5 +62,51 @@ To install :
     - It stores binary files, binary file means nothing but our commands(local user commands)
 
 - [2.25] /sbin
-    - Stores binary executable files, commands (root user command)
+    - Stores binary executable files, commands (root user commands)
+
+- [2.26] /var
+    - it stores variables data such as mail, logs, messages, caches, etc.
+
+- [2.27] /lib
+    - library file information, support 32 bit commands
+
+- [2.28] /lib64
+    - support 64 bit cmds.
+
+- [2.29] /boot 
+    - stores info about boot loader
+
+- [2.210] /dev
+    - stores info about usb drives, printer
+
+- [2.211]  /media
+    - stores info about removable devices, card reader, pendrive, floopy disk
+
+- [2.212] /sys
+    - stores kernel information
+
+- [2.213] /proc
+    - RAM and CPU info
+
+- [2.214] /tmp
+    - stores temp files for 10 days
+
+- [2.215] /usr
+    - user relates information. also stores manual pages.
+
+- [2.216] /srv
+    - service related info
+
+- [2.217] /mnt
+    - stores mount point for storage devices. ex- hard disk
+
+- [2.218] 
+- [2.219]
+
+### [2.3]Common Shortcuts
+
+[2.31] ~ 
+[2.32] Create alias of any command : 
+> alias createfolder='mkdir'
+
     
