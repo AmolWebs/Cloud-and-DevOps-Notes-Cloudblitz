@@ -1,112 +1,184 @@
-# Linux Notes
+# 🐧 Linux Master Notes
 
-## Commands
-- > ls -a `shows hidden directories`
-- > bash `use to refresh terminal`
+## 🛠️ Essential Commands
+| Command | Description |
+| :--- | :--- |
+| `ls -a` | Shows hidden directories |
+| `bash` | Use to refresh terminal |
 
+---
 
-### Day 1
-[1.1]AWS Account Creation : Create an AWS account and use console to make ec2 instance and there run this below commands in terminal.
+## 📅 Day 1
 
+### ☁️ [1.1] AWS Account Creation
+1. Create an AWS account.
+2. Use the console to launch an EC2 instance.
+3. Connect and run commands in the terminal.
 
-[1.2]Types of Path => 
-ex. directory path 
-> /root/home/code
-- consider you are in /home and want to go in /code directory
-- [1.21]1] Absolute Path 
-    > cd /root/home/code
-- [1.22]2] Relative Path 
-    > cd code
+### 📂 [1.2] Types of Path
+**Example Directory:** `/root/home/code`
 
-***
-### [1.3]Get OS Information 
-- [1.31]To see OS Information of a system use cmd -> cat /etc/os-release
-- another way to go there -> cd / -> cd etc -> cat os-release
+| Type | Description | Example Command |
+| :--- | :--- | :--- |
+| **Absolute Path** | Full path from root | `cd /root/home/code` |
+| **Relative Path** | Path from current directory | `cd code` (if in `/home`) |
 
+### ℹ️ [1.3] Get OS Information
+- **View OS Info:**
+  ```bash
+  cat /etc/os-release
+  # Alternative: cd / -> cd etc -> cat os-release
+  ```
+- **View Content:** You can list directory contents without entering them.
 
+### ⚡ Utility Commands
+- **[1.4] Root Access:**
+  ```bash
+  sudo -i
+  ```
+- **[1.5] Parent Command (Recursive Directory Creation):**
+  ```bash
+  mkdir -p project/next/live
+  ```
+  > Creates `project` -> `next` -> `live`. Without `-p`, this fails if parent directories don't exist.
 
-### Without cd we can see the content inside the directory refer [1.31]
+- **[1.6] Tree Command:** *View directory hierarchy*
+  ```bash
+  apt update -y
+  apt install tree -y
+  tree
+  ```
 
-### Some Commands
-- [1.4] Root Access Command 
-- > sudo -i
+---
 
-- [1.5] Parent Command => 
-- > mkdir -p project/next/live 
+## 📅 Day 2
 
-- It creates directory inside directory and if you "ls" this it gives "project" directory. without -p it is not possible.
+### 🗓️ [2.1] Calendar (`cal`)
+```bash
+cal 2026      # Shows entire year 2026
+cal 05 2028   # Shows May 2028
+```
 
-- [1.6] Tree Command : It is use to see the heirarchy of the directores.
-To install : 
-- > apt update -y
-- > apt install tree -y
-- > tree
+### 📁 [2.2] Linux Directory System
+*There are 19 Default Directories*
 
- ### Day 2
- [2.1] **cal command** => This command use to see calender -> syntax :
- - > cal 2026 `This cmd shows entire year's calender`
- - > cal 05 2028 `This shows calender of month 5 of 2028`
+| Directory | Description |
+| :--- | :--- |
+| **`/` (Root)** | The starting point. Use `sudo -i` (*Super User Do*) to access. |
+| **`/home`** | Home for normal users (e.g., Ubuntu, Amol). |
+| **`/etc`** | Stores configuration files for system and services. |
+| **`/bin`** | Stores binary files (common user commands). |
+| **`/sbin`** | Stores system binary files (root commands). |
+| **`/var`** | Variable data (logs, mail, messages, caches). |
+| **`/lib`** | Shared library files (supports 32-bit commands). |
+| **`/lib64`** | Shared library files (supports 64-bit commands). |
+| **`/boot`** | Stores boot loader information. |
+| **`/dev`** | Device files (USB drives, printers). |
+| **`/media`** | Mount points for removable media (SD cards, pendrives). |
+| **`/sys`** | Kernel system information. |
+| **`/proc`** | RAM and CPU information. |
+| **`/tmp`** | Temporary files (stored for ~10 days). |
+| **`/usr`** | User-related programs and manual pages. |
+| **`/srv`** | Service-related data. |
+| **`/mnt`** | Mount points for storage devices (e.g., hard disk). |
 
-[2.2] **Linux Directory System**
-- *There is 19 Default Directories*
-- [2.21] Root Directory(/) :
-    - To go in this directory : use cmd 
-         > sudo -i `user called root user. full form of sudo : super user do`
-- [2.22] Home Directory(/home) :
-    - it shows normal user ex. Ubuntu, Amol, Hp, etc.
-    > sudo su `su for switch user. You can change user which in inside root directory. It took you to home directory of that local user`
-- [2.23] /etc 
-    - It stores all configurations files of system and services.
+### ⌨️ [2.3] Common Shortcuts
+- **`~` (Tilde):** Represents the user's home directory.
+- **Create Alias:**
+  ```bash
+  alias createfolder='mkdir'
+  ```
 
-- [2.24] /bin
-    - It stores binary files, binary file means nothing but our commands(local user commands)
+---
 
-- [2.25] /sbin
-    - Stores binary executable files, commands (root user commands)
+## 🚀 New Batch Notes
 
-- [2.26] /var
-    - it stores variables data such as mail, logs, messages, caches, etc.
+### 📅 23 Jan 2026
+- **Shell Differences:**
+  - `sh`: Displays a minimal prompt (`$` or `#`).
+  - `bash`: Displays full context (e.g., `root@ip-172-31-40-2:~#`).
 
-- [2.27] /lib
-    - library file information, support 32 bit commands
+### 📅 24 Jan 2026
+#### 🔌 EC2 Connection Steps
+1. **EC2 Instance Connect** (Browser).
+2. **PowerShell / SSH:**
+   - Copy the "SSH Client" link.
+   - Open PowerShell in the key's directory.
+   - Paste command.
 
-- [2.28] /lib64
-    - support 64 bit cmds.
+#### 🖥️ Linux Prompt Explanation
+`root@ip-172-31-40-2:~#`
+- **User:** `root`
+- **Host:** `ip-blah-blah`
+- **Path:** `~` (Home)
+- **Privilege:** `#` (Root) vs `$` (User)
 
-- [2.29] /boot 
-    - stores info about boot loader
+#### 📝 Daily Commands
+| Command | Description |
+| :--- | :--- |
+| `pwd` | Print Present Working Directory |
+| `ls` | List files/dirs (*Blue=Dir, White=File*) |
+| `sudo -i` | Switch to Root user |
+| `sudo su` | Switch to Root (maintain current shell env) |
+| `touch filename` | Create an empty file |
+| `touch file{1..5}`| Create multiple files |
+| `clear` | Clear terminal screen |
+| `init 0` | Shutdown system |
 
-- [2.210] /dev
-    - stores info about usb drives, printer
+### 📅 27 Jan 2026
+> **Tip:** Manage Payment Preferences
+> *Billing and Cost Management -> Preferences -> Payment Preferences*
 
-- [2.211]  /media
-    - stores info about removable devices, card reader, pendrive, floopy disk
+#### 🆕 Commands
+| Command | Description |
+| :--- | :--- |
+| `mkdir` | Create an empty directory |
+| `history` | View command history |
+| `history -c` | Clear history |
+| `ctrl + c` | Cancel/Kill process |
+| `q` | Quit viewer |
+| `ls -l` | Long detailed list |
+| `ls -a` | Show hidden files |
+| `mkdir .<name>` | Create hidden directory (is used for all other means for `touch` and multi file or directory creation) |
+| `lsblk` | View block devices (hard disk info) |
+| `df -h` | View disk space usage (human readable) |
+| `free` | View memory information |
+| `free -h` | View RAM info (human readable) |
+| `free -m` | View RAM info in MB |
+| `free -g` | View RAM info in GB |
+| `free -k` | View RAM info in KB |
+| `man <command>` | View manual for a command |
 
-- [2.212] /sys
-    - stores kernel information
+#### ⚠️ Remove & Delete Commands
+**Flags Explained:**
+- **`-r`**: Recursive (creates/deletes inside directories).
+- **`-f`**: Forcefully (no confirmation).
+- **`-v`**: Verbose (shows action details).
 
-- [2.213] /proc
-    - RAM and CPU info
+| Command | Description |
+| :--- | :--- |
+| `rmdir <dirname>` | Remove directory |
+| `rm` | Remove Empty File |
+| `rm -r` | Remove Non-empty Directory or file |
+| `rm -rf` | Remove Non-empty Directory or file forcefully |
+| `rm -rf /*` | **DANGER:** Remove all files and directories (Do not use) |
+| `rm -f` | Remove file forcefully |
+| `mkdir directory -v` | Create directory with verbose output |
 
-- [2.214] /tmp
-    - stores temp files for 10 days
+> **Note on Navigation:**
+> If you do `ls -a` you will see first 2 list items as `. ..`.
+> - `.` : Current directory
+> - `..` : Previous directory path
 
-- [2.215] /usr
-    - user relates information. also stores manual pages.
+#### 🧱 Command Syntax
+**Structure:** `Command` + `Argument` + `Option`
 
-- [2.216] /srv
-    - service related info
+**Example:**
+```bash
+> ls -l
+```
+- **Command:** `ls`
+- **Argument:** `-`
+- **Option:** `l`
 
-- [2.217] /mnt
-    - stores mount point for storage devices. ex- hard disk
-
-- [2.218] 
-- [2.219]
-
-### [2.3]Common Shortcuts
-
-[2.31] ~ 
-[2.32] Create alias of any command : 
-> alias createfolder='mkdir'
-
-    
+> *Always syntax is made up of command, argument and option.*
