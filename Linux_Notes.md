@@ -189,33 +189,34 @@ cal 05 2028   # Shows May 2028
 > *Always syntax is made up of command, argument and option.*
 
 
-## 📅 28 Jan 2026
+### 📅 28 Jan 2026
 
-Path in Linux : 
-- 1) Absolute Path : Full path from root. ex. `/root/home/code`
-- 2) Relative Path : Path from current directory  . ex. `code`
+#### 📂 Path in Linux
+- **1) Absolute Path:** Full path from root.
+  - *Example:* `/root/home/code`
+- **2) Relative Path:** Path from current directory.
+  - *Example:* `code`
 
-commands :
-- `cat` : Concatenate files and print on the standard output
-- `cat > filename` : Create a file
-- `cat >> filename` : Append to a file
-- `cat < filename` : Read a file
-- `cat < filename > newfilename` : Copy a file
-- `cat < filename > newfilename` : Copy a file
+#### 📝 File Operations
+| Command | Description |
+| :--- | :--- |
+| `cat` | Concatenate files and print on the standard output |
+| `cat > filename` | Create a file |
+| `cat >> filename` | Append to a file |
+| `cat < filename` | Read a file |
+| `cat < filename > newfilename` | Copy a file |
+| `echo "hello it is text" > filename` | Create a file and append text to it |
+| `echo "hello it is text" >> filename` | Append to a file |
+| `echo "hello it is text" < filename` | Read a file |
+| `echo "hello it is text" < filename > newfilename` | Copy a file |
+| `cp <source> <destination>` | Copy a file |
+| `mv <source> <destination>` | Use for move and rename file |
+| `mv <oldname> <newname>` | Rename file |
 
-- `echo "hello it is text" > filename` : Create a file and append text to it
-- `echo "hello it is text" >> filename` : Append to a file
-- `echo "hello it is text" < filename` : Read a file
-- `echo "hello it is text" < filename > newfilename` : Copy a file
-- `echo "hello it is text" < filename > newfilename` : Copy a file
-
-- `cp <source> <destination>` : Copy a file
-- `mv <source> <destination>` : use for move and rename file
-- `mv <oldname> <newname>` : rename file
-
-- `lscpu` : View CPU information
-
-
--`hostname` : View hostname
--`hostname <newname>` : Set hostname temporary
--`hostnamectl` : View hostname and other information
+#### ⚙️ System Information
+| Command | Description |
+| :--- | :--- |
+| `lscpu` | View CPU information |
+| `hostname` | View hostname |
+| `hostname <newname>` | Set hostname temporary |
+| `hostnamectl` | View hostname and other information |
