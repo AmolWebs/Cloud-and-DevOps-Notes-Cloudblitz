@@ -484,3 +484,15 @@ Basic introduction about 'what is cloud and it's benefits'
    - There are total 39 regions in world out of which 4 regions takeen by china and usa for their internal governemnt activity.
    - 17 regions needs permissions from AWS to access.
    - 18 regions are publically available.
+
+   **Regions in India:**
+   1. **Mumbai (ap-south-1)** -> [Availability Zones] A1 - 1a(mumbai), 1b(delhi), 1c(Kolkata)
+   2. **Hyderabad (ap-south-2)** -> [Availability Zones] A2 - 2a(Hyderabad), 2b(bangalore), 2c(chennai)
+
+2. **Availability Zone (AZ):** An Availability Zone is a distinct location within an AWS Region that is isolated from failures in other Availability Zones. Each AZ has redundant power, networking, and connectivity and is housed in separate facilities.
+
+3. **Edge Location:** An edge location is a data center that is used to cache content closer to end users, reducing latency and improving performance.
+
+4. **Local Zones:** AWS Local Zones are a type of AWS infrastructure deployment that places compute, storage, database, and other select services closer to large population, industry, and IT centers, enabling applications that require single-digit millisecond latency for end users.
+
+5. **Wavelength Zones:** AWS Wavelength Zones embed AWS compute and storage services within 5G networks, providing mobile edge computing infrastructure for ultra-low latency applications to 5G devices.
