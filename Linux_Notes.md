@@ -467,3 +467,20 @@ Tool used for automation and job scheduling.
 
 **Utility:**
 `ifconfig`: To see all information about IP, Loopback Address.
+
+
+### Day 19 (18 Feb 2026) 
+Basic introduction about 'what is cloud and it's benefits'
+
+
+### 📅 Day 20 (19 Feb 2026)
+
+- **Cloud Services:** IaaS, PaaS, SaaS
+- **Deployment Models:** Public, Private, Hybrid (combination of public and private cloud), Community Cloud
+
+#### 🌍 AWS Global Infrastructure
+
+1. **Region:** An AWS Region is a geographically separate location that contains multiple Availability Zones where AWS resources are deployed.
+   - There are total 39 regions in world out of which 4 regions takeen by china and usa for their internal governemnt activity.
+   - 17 regions needs permissions from AWS to access.
+   - 18 regions are publically available.
